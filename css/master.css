@@ -1,0 +1,194 @@
+/* ------- Main Settings ------ */
+:root{
+    --main-color:#10cab7;
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;   
+    font-size: 18px;
+    background-color: hsl(0, 0%, 100%);;
+}
+
+/* -----------------------------------*/
+.container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 40px;
+    -webkit-box-shadow: 19px 12px 14px -6px rgba(0,0,0,0.2); 
+    box-shadow: 19px 12px 14px -6px rgba(0,0,0,0.2);
+    border-radius: 25px;
+}
+@media (max-width:767px){
+    .container{
+        left:0 ;
+        top: 0;
+        transform: translate(0);
+       flex-direction: column;
+       min-width: 100%;
+       border-bottom-left-radius: 0;
+       border-bottom-right-radius: 0;
+    } 
+}
+/* ------------------------------------ */
+.container .left-side{
+    background: rgb(120,87,255);
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    padding-bottom: 35px;
+    min-width: 350px;
+    
+}
+.container .left-side h5 {
+    font-size: 20px;
+}
+.container .left-side .score {
+    border-radius: 50%;
+    background: rgb(132,97,229);
+    background: linear-gradient(180deg, hsla(256, 72%, 46%,1) 0%, hsla(241, 72%, 46%,0) 100%);
+    margin: 0 auto;
+    width:200px;
+    height: 200px;
+    position: relative;
+    
+}
+.container .left-side .score .text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) ;
+}
+.container .left-side .score span{
+    display: block;
+}
+.container .left-side .score .main-score{
+    font-size: 80px;
+    font-weight: 900;
+    color: hsl(221, 100%, 96%)
+}
+.container .left-side h4 {
+    font-size: 30px;
+    color: hsl(221, 100%, 96%)
+}
+.container .left-side h5, .container .left-side p,.container .left-side .score span:last-child {
+    color: hsl(241, 100%, 89%)
+}
+.container .left-side p{
+    line-height: 1.4;
+    max-width: 250px;
+    margin: 0 auto;
+}
+@media (max-width:767px){
+    .container .left-side{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    } 
+    .container .left-side .score {
+        border-radius: 50%;
+        width:150px;
+        height: 150px;
+    }
+    .container .left-side h4 {
+        font-size: 25px;
+        margin: 20px 0;
+    }
+    .container .left-side p{
+        line-height: 1.4;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+/* ----------------------------------------*/ 
+.container .right-side{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    padding-right: 40px;  
+}
+.container .right-side h4{
+    font-size: 25px;
+    
+}
+.container .right-side .line {
+    height: 60px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container .right-side .line span:nth-of-type(2){
+    display: block;
+    margin-left: auto; 
+}
+.container .right-side .line span.black{
+    color: black;
+}
+.container .right-side .line span:nth-of-type(2){
+    color: gray
+}
+.container .right-side .line img {
+    margin-right: 10px;
+}
+.container .right-side .line.red{
+    color:var(--Light-red);
+    background-color: hsl(0deg 100% 67% / 5%);
+    
+    
+}
+.container .right-side .line.yollow{
+    color:var(--Orangey-yellow);
+    background-color: hsl(39deg 100% 56% / 5%);;
+    
+}
+.container .right-side .line.green{
+    color:var(--Green-teal);
+    background-color: hsl(166deg 100% 37% / 5%);
+
+}
+.container .right-side .line.blue{
+    color:var(--Cobalt-blue);
+    background-color: hsl(234deg 85% 45% / 5%);
+}
+.container .right-side a {
+    background-color: hsl(224, 30%, 27%);
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.container .right-side a:hover {
+    background: rgb(120,87,255);
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+}
+@media (max-width:767px){
+    .container .right-side{
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        padding-right: 0;
+        padding: 0 30px 10px; 
+    }
+    .container .right-side h4{
+        margin: 0 0 40px;
+    }
+}
